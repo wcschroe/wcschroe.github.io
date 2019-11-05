@@ -88,7 +88,7 @@
         window.onload = () => {
             let xhr = new XMLHttpRequest();
             // Request to open weather map
-            xhr.open('GET', 'http://api.openweathermap.org/data/2.5/weather?q=Gilbert&units=imperial&appid=e5b292ae2f9dae5f29e11499c2d82ece');
+            xhr.open('GET', 'http://api.openweathermap.org/data/2.5/weather?q=tempe&units=imperial&appid=a18c26ca6684068d48f75b258aa4c67c');
             xhr.onload = () => {
                 if (xhr.readyState === 4) {
                     if (xhr.status === 200) {
