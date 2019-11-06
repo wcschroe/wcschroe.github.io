@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
     <title>Home</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styleshomepage.css">
     <link href="favicon.png" rel="shortcut icon" type="image/x-icon" />
 </head>
 <body>
@@ -77,8 +77,9 @@
                 sec = date.getSeconds(),
                 hour = date.getHours();
             let ampm;
-            hour < 12 ? ampm = " AM" : ampm = " PM"
-            hour = hour % 12;
+            ampm = (hour < 12) ? " AM" : " PM"
+            if (hour == 12 || hour == 24) hour = 12;
+			else hour = hour % 12;
             return "" + 
                 (hour < 10 ? ("0" + hour) : hour) + ":" + 
                 (min < 10 ? ("0" + min) : min) + ":" + 
